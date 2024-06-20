@@ -27,15 +27,14 @@ git push -u origin master
 6. Update the Remote URL:
 
  command example: 
+ -----------------
+ 
 	git remote set-url origin https://Ishappa:<your_personal_access_token>@github.com/Ishappa/JavaScript-New.git
 	
 	
-	-->aem repo key --> git remote set-url origin https://Ishappa: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@github.com/Ishappa/JavaScript-New.git
-	
 
-	
-
-Push Changes:
+Push Change
+--------------
 
 git push -u origin master
  
