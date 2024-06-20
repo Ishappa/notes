@@ -1,3 +1,14 @@
+	
+wifi pass:C0d!l@r$Trainee
+--
+
+https://rmg.codilar.in/
+Popup credential
+Username : rmg-live
+Pass: rmgliveaA@123
+
+
+
 Setup IntelliValt in Intellije:
 ===================================
 -->jdk 11.0 install  (sudo apt-get install default-jdk  )--> latest one will install
@@ -18,6 +29,25 @@ Setup IntelliValt in Intellije:
 -->Intellij->settings->tools->intellivalut->browse -->extracted cli lib file-> then select cli 3.2.2 file which will be inside li lib file
 
 -->we have to install maven 
+
+Set up enivironment varible jdk and maven in Ubuntu  
+======================================================
+
+home->.bashrc
+
+#Setting JAVA_HOME
+JAVA_HOME=/usr/lib/jvm/jdk-11
+export JAVA_HOME
+
+export PATH=$PATH:$JAVA_HOME/bin
+
+#Setting MAVEN_HOME
+MAVEN_HOME=/opt/apache-maven-3.9.3/apache-maven-3.9.3
+
+export MAVEN_HOME
+export PATH=$PATH:$MAVEN_HOME/bin
+
+
 
 Run instance by using command 
 ===========================
@@ -165,7 +195,6 @@ https://express.adobe.com/page/wmEF6wQ6rjrQX/
 https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/experience_m...
 
 
-
 https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md
 
 
@@ -181,13 +210,7 @@ js
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>     
 
-	
-wifi pass:C0d!l@r$Trainee
 
-https://rmg.codilar.in/
-Popup credential
-Username : rmg-live
-Pass: rmgliveaA@123
 
 cmd:qstartcloud instance: java -d64 -Xmx2048M -jar aem-author-p4502.jar -gui
 
@@ -201,14 +224,16 @@ mvn -B archetype:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifact
 mvn -B archetype:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=39 -D appTitle="WKND Sites Project" -D appId="wknd" -D groupId="com.adobe.aem.guides" -D artifactId="aem-guides-wknd" -D package="com.adobe.aem.guides.wknd" -D version="0.0.1-SNAPSHOT" -D aemVersion="6.5.0"
 
 
-
-===============================================================================================================================================
 querydebug : 
+=========
 
 libs/cq/search/content/querydebug.html
 
+AEM Start
 ================================================
-aem start = java -Xmx1024m -jar jar file name -gui
+ java -Xmx1024m -jar jar file name -gui
+	or
+java -jar aem-author-form--p4502.jar
 
 
 http://localhost:4502/crx/de/index.jsp#   
@@ -216,10 +241,11 @@ http://localhost:4502/crx/de/index.jsp#
 http://localhost:4502/sites.html/content
 
 http://localhost:4502/system/console/bundles
----------------------------------------------
+
+===============================================================================================================================================
 
 TOPICS:
-
+====================================
 *components
 *HTL, Sightly
 *Project creation 
@@ -234,12 +260,34 @@ TOPICS:
 ->slingSuperType- inheriting the content
 *Content-Fragment
 *Experience-Fragment
-========================================================
+
 
 WORKFLOWS: 
+========================================================
 
 AEM includes a robust workflow system for automating content approval processes. Workflows define a series of steps and actions that content must go through 
-	before publication.
+	before publication.  0r
+
+In Adobe Experience Manager (AEM), workflows and schedulers are both tools used to automate tasks, but they serve different purposes and are used in different contexts. Here's a detailed comparison between the two:
+
+Purpose:
+-----------
+
+Workflows are designed to automate complex processes that involve multiple steps and possibly multiple users. They are often used for content creation, review, approval, and publishing processes.
+Features:
+
+Multi-step processes: Workflows can include multiple steps that need to be performed in sequence. Each step can be assigned to different users or groups.
+
+User interaction: Steps in a workflow can require human interaction, such as approvals or edits.
+Conditional logic: Workflows can include conditions that determine the path of the process based on certain criteria.
+
+Integration: Workflows can integrate with other AEM services and third-party systems to perform a variety of tasks.
+
+Examples:
+-------------
+
+Content approval processes: Submitting a piece of content for review, getting feedback, making revisions, and finally publishing the content.
+
 
 * Container step
 *Participent step
@@ -251,9 +299,8 @@ Launcher: when you want to automate the trigger of the workflow.
 ex: when new page creation some task wants to perform.
 
 
-
-===============================================================================================================================================
 Q: Explain the architecture of Adobe Experience Manager.
+===============================================================================================================================================
 
 Two Environments:
 =================
@@ -301,10 +348,11 @@ AEM offers various integration points, including APIs, servlets, and connectors,
 ===============================================================================================================================================
 
 Q: What is the purpose of the Dispatcher in AEM?
+===============================================================================================================================================
 
 A: The Dispatcher is a caching and load balancing tool that sits in front of AEM Publish instances, caching content, and 
 	improving website performance by serving cached content to end-users.
-===============================================================================================================================================
+
 
 Q: What is Sightly in AEM?
 
@@ -328,26 +376,21 @@ A: Workflows in AEM are used to automate and streamline content approval process
 ===============================================================================================================================================
 
 Q: Explain the role of replication agents in AEM.
+--
 
 A: Replication agents in AEM are responsible for copying content from the Author instance to the Publish instance. 
    They ensure that approved content is made available to end-users.
-===============================================================================================================================================
+
 
 Q: How does versioning work in AEM?
+===============================================================================================================================================
 
 A: AEM maintains versions of content to track changes over time. When a page is edited, a new version is created. Authors can revert to previous versions if needed.
 
-===============================================================================================================================================
-
-
-===============================================================================================================================================
-
-===============================================================================================================================================
-
-===============================================================================================================================================
 
 ===============================================================================================================================================
 1.what is aem? why it is use.
+--
 
 -->content management solution within the Adobe Marketing Cloud. It enables organizations to create, manage, 
 	and deliver digital content across multiple channels, including websites and mobile apps.
