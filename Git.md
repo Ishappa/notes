@@ -16,6 +16,25 @@ git commit -m "Initial commit"
 # Push to the main branch
 git push -u origin master
 
+#Rename the branch if not visible create one new and rename to new
+git branch -m master main
+
+somtimes we cant push code to main create new and push then modify to main using above commond then below step
+
+1. If you're on a branch and you realize it isn't tracking any remote branch:
+git branch --set-upstream-to=origin/main main
+
+2. Fetch Remote Changes:
+git fetch origin main
+
+3.if we can merge or cant push using (git merge master)
+git merge origin/main --allow-unrelated-histories
+
+
+# delete branch 
+git push origin --delete master
+
+
  
  or if you are pushing code to new repo
 ==============================================
@@ -27,14 +46,16 @@ git push -u origin master
 6. Update the Remote URL:
 
  command example: 
- -----------------
- 
 	git remote set-url origin https://Ishappa:<your_personal_access_token>@github.com/Ishappa/JavaScript-New.git
 	
 	
+	-->aem repo key --> git remote set-url origin https://Ishappa:<token>@github.com/Ishappa/JavaScript-New.git
+	--->
+	
 
-Push Change
---------------
+	
+
+Push Changes:
 
 git push -u origin master
  
