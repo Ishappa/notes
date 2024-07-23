@@ -1,5 +1,4 @@
- 
- 
+
  
  # Initialize Git repository if not already done
 git init
@@ -35,6 +34,48 @@ git merge origin/main --allow-unrelated-histories
 git push origin --delete master
 
 
+#Merge Latest Changes from Another Branch
+
+1. git checkout your-branch
+
+2. git fetch origin
+
+3. git merge origin/main  # Replace 'main' with the branch you want to merge from
+
+4. by miss before pull you pushed the code conflicts will appear how to resolve?
+
+solution:
+-------------
+1. git checkout your-branch
+
+2. git fetch origin
+
+3. git rebase origin/main  # Replace 'main' with the branch you want to rebase onto
+
+4. git status
+
+
+============================Rebase Process:===================
+
+A---B---C  (main)
+         \
+          C1---C2---C3  (feature-branch)
+	Latest Commits on Another Branch:
+	Meanwhile, main has new commits that were added since you branched off, making the history look like this:
+
+
+A---B---C---D---E  (main)
+         \
+          C1---C2---C3  (feature-branch)
+
+Rebase Process:
+----------------------
+-> When you perform git rebase main while on feature-branch, Git does the following:
+
+->Temporarily Removes Your Commits: It temporarily removes C1, C2, and C3 from your feature-branch.
+->Fast-Forwards to main: It moves your feature-branch to point to the latest commit on main (which is E).
+->Reapplies Your Commits: It re-applies the commits C1, C2, and C3 on top of commit E, as if they were made after E.
+
  
  or if you are pushing code to new repo
 ==============================================
@@ -47,13 +88,7 @@ git push origin --delete master
 
  command example: 
 	git remote set-url origin https://Ishappa:<your_personal_access_token>@github.com/Ishappa/JavaScript-New.git
-	
-	
-	-->aem repo key --> git remote set-url origin https://Ishappa:<token>@github.com/Ishappa/JavaScript-New.git
-	--->
-	
 
-	
 
 Push Changes:
 
@@ -62,7 +97,7 @@ git push -u origin master
  
  # for existing repo with code
  
- 1. git clone repoUrl           (it will pull all data)
+. git clone repoUrl           (it will pull all data)
  
  after modified the any code 
  
