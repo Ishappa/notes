@@ -50,9 +50,15 @@ solution:
 
 2. git fetch origin
 
-3. git rebase origin/main  # Replace 'main' with the branch you want to rebase onto
+3. git rebase origin/main  # Replace 'main'/ or 'master' with the branch you want to rebase onto
 
 4. git status
+
+--> if they arise during the rebase process. After resolving conflicts, continue the rebase process by running:
+	
+5. git rebase --continue
+
+6. git push --force-with-lease origin feature/accordion
 
 
 ============================Rebase Process:===================
